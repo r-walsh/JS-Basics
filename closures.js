@@ -111,50 +111,73 @@ var anonVar = fnCounter(function() {
 
 
 
-/*
-  var counter = function(){
+
+ /* var counter = function(){
     for (var i=1; i<=5; i++) {
       setTimeout( function timer(){
           console.log( i );
       }, i*1000 );
     }
   };
-
+/*
   Above you have a function named counter. Examine the function (without running the code) then below 
   write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or 
   evaluates an expression after a specified number of milliseconds.
 
-    //Answer Here
+    //The function will log numbers 1 through 5, after i seconds
 
 
   Now, run the function in your console and note what happpens.
 
   Was your answer right or wrong?
 
-    //Answer Here
+    //Wrong.
 
 
   Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
 */
 
-    //Code Here
+function counter(inputFunc  ) {
+  for (var i = 1; i <= 5; i++) { 
+    setTimeout(inputFunc, i * 1000, i);
+  }
+}
 
-
+function timer(countNum) {
+  console.log(countNum);
+}
 
 //Next Problem
 
-
-
+var funcArray = [];
+funcArray[0] = function() {
+  console.log(0);
+}
+funcArray[1] = function() {
+  console.log(1);
+}
+funcArray[2] = function() {
+  console.log(2);
+}
+funcArray[3] = function() {
+  console.log(3);
+}
+funcArray[4] = function() {
+  console.log(4);
+}
+funcArray[5] = function() {
+  console.log(5);
+}
 /*
   Make the following code work
-
+*/
   funcArray[0]() //0
   funcArray[1]() //1
   funcArray[2]() //2
   funcArray[3]() //3
   funcArray[4]() //4
   funcArray[5]() //5
-
+/*
   *Hint: Don't let this fool you. Break down what's really happening here.
 */
 
