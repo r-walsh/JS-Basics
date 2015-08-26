@@ -137,7 +137,7 @@ var anonVar = fnCounter(function() {
   Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
 */
 
-function counter(inputFunc  ) {
+function counter(inputFunc) {
   for (var i = 1; i <= 5; i++) { 
     setTimeout(inputFunc, i * 1000, i);
   }
